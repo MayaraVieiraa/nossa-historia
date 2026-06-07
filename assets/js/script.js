@@ -39,7 +39,7 @@ const TRACKS = [
 ══════════════════════════════════════════════════════ */
 const STORY = {
   beginning: {
-    intro: `Querido Justin, gosto muito da memória do nosso início. Gosto quando me lembro da primeira vez que te vi, e de como aquele burrinho ao seu lado me fez te achar fofo e carismático. Começou assim, de mansinho, e quando vi já estávamos conversando com carinho.`,
+    intro: `Querido Justin, gosto muito da memória do nosso início. Gosto quando me lembro da primeira vez que te vi, e de como aquele burrinho ao seu lado na foto me fez te achar fofo e carismático. Começou assim, de mansinho, e quando vi já estávamos conversando com carinho.`,
     p2: `Gosto de como temos evoluído. Gosto dos fogos de artifício que estouram no meu subconsciente quando lembro que estamos namorando. Gosto de que você esteja aberto a me conhecer como sou, e de quando me pego pensando em você antes de dormir.`,
     p3: `Gosto da simplicidade e da alegria da vida, e estou especialmente feliz por compartilhar isso com você. Estou muito feliz e grata pelo tempo que passo contigo.`,
     quote: `Você foi um começo que eu não esperava, estou tão feliz por termos nos encontrado. Agradeço a Deus e sou feliz por o universo ter nos unido no mesmo momento, hora e plataforma para nos conhecermos.`
