@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossa História</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cinzel:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <canvas id="starCanvas"></canvas>
+  <div class="nebula nebula-1"></div>
+  <div class="nebula nebula-2"></div>
+  <div class="nebula nebula-3"></div>
+
+  <!-- ══════ COVER SCREEN ══════ -->
+  <div class="screen" id="cover">
+    <div class="cover-layout">
+
+      <!-- Timer (desktop) -->
+      <div class="timer-wrap" id="timerDesktop">
+        <div class="clock-face">
+          <div class="clock-outer"></div>
+          <div class="clock-rune-ring" id="runeRing"></div>
+          <div class="clock-inner-ring"></div>
+          <div class="clock-inner">
+            <div class="clock-time" id="clockTime">--:--</div>
+            <div class="clock-sec" id="clockSec">--s</div>
+            <div class="clock-date" id="clockDateDisp">-- ---</div>
+          </div>
+        </div>
+        <div class="timer-label">
+          <p class="timer-juntos">juntos há</p>
+          <div class="timer-days" id="timerDays">0</div>
+          <div class="timer-dias-lbl">dias</div>
+          <div class="timer-hms">
+            <div class="timer-unit">
+              <span class="timer-unit-val" id="timerH">00</span>
+              <span class="timer-unit-lbl">hrs</span>
+            </div>
+            <div class="timer-unit">
+              <span class="timer-unit-val" id="timerM">00</span>
+              <span class="timer-unit-lbl">min</span>
+            </div>
+            <div class="timer-unit">
+              <span class="timer-unit-val" id="timerS">00</span>
+              <span class="timer-unit-lbl">seg</span>
+            </div>
+          </div>
+          <div class="timer-since">desde 03 · maio · 2026</div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="cover-divider">
+        <div class="cover-divider-line"></div>
+        <div class="cover-divider-gem">✦</div>
+        <div class="cover-divider-line"></div>
+      </div>
+
+      <!-- Book -->
+      <div class="book-area">
+        <div class="book-shadow"></div>
+        <div class="book-wrapper" onclick="openBook()">
+          <div class="book-spine"></div>
+          <div class="book-pages-edge"></div>
+          <div class="book-cover">
+            <div class="book-cover-stars" id="bookStars"></div>
+            <div class="book-border-outer"></div>
+            <div class="book-border-inner"></div>
+            <div class="book-corner" style="top:25px;left:25px;">✦</div>
+            <div class="book-corner" style="top:25px;right:25px;">✦</div>
+            <div class="book-corner" style="bottom:25px;left:25px;">✦</div>
+            <div class="book-corner" style="bottom:25px;right:25px;">✦</div>
+            <div class="book-glow-center"></div>
+            <div class="book-content">
+              <div class="book-ornament">
+                <div class="book-ornament-line"></div>
+                <span class="book-ornament-gem">✦</span>
+                <div class="book-ornament-line"></div>
+              </div>
+              <h1 class="book-title">Nossa<br />História</h1>
+              <div class="book-subtitle-line"></div>
+              <p class="book-subtitle">03 de maio<br />o início de algo especial</p>
+              <div class="book-ornament" style="margin-top:22px;margin-bottom:0;">
+                <div class="book-ornament-line"></div>
+                <span class="book-ornament-gem">✦</span>
+                <div class="book-ornament-line"></div>
+              </div>
+            </div>
+          </div>
+          <div class="book-open-btn-wrap">
+            <button class="book-open-btn" onclick="openBook()">Abrir Livro</button>
+            <p class="book-open-hint">clique para começar</p>
+          </div>
+        </div>
+
+        <!-- Mobile timer -->
+        <div class="mobile-timer" id="timerMobile">
+          <div class="clock-face">
+            <div class="clock-outer"></div>
+            <div class="clock-inner">
+              <div class="clock-time" id="clockTimeMob">--:--</div>
+              <div class="clock-sec" id="clockSecMob">--s</div>
+              <div class="clock-date" id="clockDateMob">-- ---</div>
+            </div>
+          </div>
+          <div class="timer-label">
+            <p class="timer-juntos">juntos há</p>
+            <div class="timer-days" id="timerDaysMob">0</div>
+            <div class="timer-dias-lbl">dias</div>
+            <div class="timer-hms">
+              <div class="timer-unit"><span class="timer-unit-val" id="timerHMob">00</span><span class="timer-unit-lbl">hrs</span></div>
+              <div class="timer-unit"><span class="timer-unit-val" id="timerMMob">00</span><span class="timer-unit-lbl">min</span></div>
+              <div class="timer-unit"><span class="timer-unit-val" id="timerSMob">00</span><span class="timer-unit-lbl">seg</span></div>
+            </div>
+            <div class="timer-since">desde 03 · maio · 2026</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════ BOOK SCREEN ══════ -->
+  <div class="screen hidden" id="book-screen">
+    <div class="book-bg-glow"></div>
+
+    <div class="book-container">
+      <!-- Left panel -->
+      <div class="book-left">
+        <div class="book-left-stars" id="bookLeftStars"></div>
+
+        <div>
+          <div class="book-chapter-label">Nossa História</div>
+          <div class="book-chapters" id="chaptersNav"></div>
+          <button class="desktop-home-btn" onclick="goToHome()">✦ voltar à capa</button>
+        </div>
+
+        <div class="book-arcane">
+          <div class="arcane-ring">
+            <div class="arcane-inner"></div>
+            <span class="arcane-gem">✦</span>
+          </div>
+        </div>
+
+        <div class="book-page-num-left" id="pageNumLeft">1</div>
+      </div>
+
+      <!-- Right panel -->
+      <div class="book-right">
+        <div class="book-right-glow"></div>
+        <div class="book-right-content" id="pageContent"></div>
+        <div class="book-page-num-right" id="pageNumRight">2</div>
+      </div>
+
+      <!-- Nav arrows -->
+      <button class="nav-arrow nav-prev" onclick="goPrev()" aria-label="Anterior">‹</button>
+      <button class="nav-arrow nav-next" id="navNext" onclick="goNext()" aria-label="Próxima">›</button>
+
+      <!-- Dots -->
+      <div class="progress-dots" id="progressDots"></div>
+
+      <!-- Mobile nav -->
+      <div class="mobile-nav">
+        <button class="mobile-nav-btn" onclick="goPrev()">← anterior</button>
+        <button class="mobile-nav-btn" onclick="goToHome()">início</button>
+        <button class="mobile-nav-btn" id="mobileNext" onclick="goNext()">próxima →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Music Container -->
+  <div id="bg-music-container" style="position: absolute; opacity: 0.01; pointer-events: none; z-index: -100;"></div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
