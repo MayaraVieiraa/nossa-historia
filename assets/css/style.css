@@ -474,7 +474,7 @@ html, body {
   flex-direction: column;
   justify-content: space-between;
 }
-.book-left-stars { position: absolute; inset: 0; overflow: hidden; }
+.book-left-stars { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
 
 .book-chapter-label {
   font-family: var(--font-title);
@@ -946,6 +946,8 @@ html, body {
   gap: 8px;
   padding: 6px 0;
   width: fit-content;
+  position: relative;
+  z-index: 1;
 }
 .desktop-home-btn:hover {
   color: var(--gold);
