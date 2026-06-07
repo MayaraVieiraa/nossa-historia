@@ -39,14 +39,10 @@ const TRACKS = [
 ══════════════════════════════════════════════════════ */
 const STORY = {
   beginning: {
-    intro: `Tinha algo diferente naquele dia. Uma leveza que não saberia nomear na hora — só depois,
-quando me peguei pensando em você antes de dormir, entendi que algo havia mudado.`,
-    p2: `O pedido foi simples. Sem grandes cerimônias. Mas às vezes as coisas mais bonitas chegam
-assim, sem avisar, com a naturalidade de quem já sabe que ficará.`,
-    p3: `Um mês se passou desde então. Um mês de conversas que se estendem mais do que o planejado,
-de mensagens que chegam na hora certa, de uma distância que, estranhamente, nunca pesou
-tanto quanto eu pensava que pesaria.`,
-    quote: `Você foi um começo que eu não esperava — e que não troco por nada.`
+    intro: `Querido Justin, gosto muito da memória do nosso início. Gosto quando me lembro da primeira vez que te vi, e de como aquele burrinho ao seu lado me fez te achar fofo e carismático. Começou assim, de mansinho, e quando vi já estávamos conversando com carinho.`,
+    p2: `Gosto de como temos evoluído. Gosto dos fogos de artifício que estouram no meu subconsciente quando lembro que estamos namorando. Gosto de que você esteja aberto a me conhecer como sou, e de quando me pego pensando em você antes de dormir.`,
+    p3: `Gosto da simplicidade e da alegria da vida, e estou especialmente feliz por compartilhar isso com você. Estou muito feliz e grata pelo tempo que passo contigo.`,
+    quote: `Você foi um começo que eu não esperava, estou tão feliz por termos nos encontrado. Agradeço a Deus e sou feliz por o universo ter nos unido no mesmo momento, hora e plataforma para nos conhecermos.`
   },
   loveItems: [
     "a forma como você me trata com cuidado",
